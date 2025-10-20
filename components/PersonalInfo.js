@@ -3,7 +3,9 @@ import DatePicker from '../components/DatePicker.js';
 import {useState} from 'react';
 
 
-export default function PersonalInfo({screenstyle}) {
+export default function PersonalInfo({screenstyle, data, setData}) {
+
+  data={booking}, setData={setBooking}
 
   const [dob, setDob] = useState(new Date("2000-01-01"));
  
@@ -15,6 +17,7 @@ export default function PersonalInfo({screenstyle}) {
     setDob(value);
     setShowDTP(false);
   }
+
   return (
     <View style={screenstyle}>
       <View style={styles.label}><Text style={styles.label}>Firstname</Text></View>
