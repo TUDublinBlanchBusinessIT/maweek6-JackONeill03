@@ -4,6 +4,7 @@ import PersonalInfo from './components/PersonalInfo';
 import MovieBooking from './components/MovieBooking';
 import * as Crypto from 'expo-crypto';
 import { useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         await AsyncStorage.setItem(uuid, JSON.stringify(booking));
         alert("Saved with UUID: " + uuid);
         Alert.alert("Saved with UUID: " + uuid);
+        await AsyncStorage.setItem(uuid, JSON.stringify(booking));
 }
 
 
